@@ -7,7 +7,7 @@ class Lsef < Formula
   license "MIT"
 
   url "https://github.com/Takayuki-Todo/lsef/releases/download/v#{VERSION}/lsef-#{VERSION}_darwin_amd64.tar.gz"
-  sha256 "fc482465d0e31fd34ebb510b43d574e231f33239afcdd6ea72d9c8741fed484c"
+  sha256 "ae16f0822e51ed26090578a532d29c79fe6f226a42edef195bfbb31fb87ecf8e"
 
   def install
     bin.install "lsef"
