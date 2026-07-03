@@ -16,12 +16,12 @@ class Lsef < Formula
     sha256 "f0eec2c2cc4f17668855e32849f3cbb9136ec1eb53f48d88df3c6d07c4851044"
   end
 
-  def install
-    bin.install "lsef"
-    bash_completion.install "completions/bash/lsef"
-    zsh_completion.install "completions/zsh/_lsef"
-    fish_completion.install "completions/fish/lsef"
-  end
+def install
+  bin.install "lsef"
+  bash_completion.install "completions/bash/lsef"
+  zsh_completion.install "completions/zsh/_lsef"
+  fish_completion.install "completions/fish/lsef.fish"
+end
 
   test do
     system "#{bin}/lsef", "--help"
