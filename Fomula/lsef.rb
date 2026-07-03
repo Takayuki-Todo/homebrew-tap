@@ -8,12 +8,12 @@ class Lsef < Formula
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/Takayuki-Todo/lsef/releases/download/v#{VERSION}/lsef-#{VERSION}_darwin_amd64.tar.gz"
-    sha256 "ae16f0822e51ed26090578a532d29c79fe6f226a42edef195bfbb31fb87ecf8e"
+    sha256 "6e0a4223c5d76bc9f9dadeb9ec75822e909e1e2d6f472adc114fea35cd563761"
   end
 
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/Takayuki-Todo/lsef/releases/download/v#{VERSION}/lsef-#{VERSION}_darwin_arm64.tar.gz"
-    sha256 "b00895e5b0379fa02f0e816112bc96ff1d9219d9854cefd6005777231292920a"
+    sha256 "f0eec2c2cc4f17668855e32849f3cbb9136ec1eb53f48d88df3c6d07c4851044"
   end
 
   def install
