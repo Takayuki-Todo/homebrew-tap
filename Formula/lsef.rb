@@ -20,7 +20,7 @@ def install
   bin.install "lsef"
   bash_completion.install "completions/bash/lsef"
   zsh_completion.install "completions/zsh/_lsef"
-  fish_completion.install "completions/fish/lsef.fish"
+  fish_completion.install "completions/fish/lsef" => "lsef.fish"
 end
 
   test do
