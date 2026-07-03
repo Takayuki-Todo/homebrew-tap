@@ -1,4 +1,4 @@
-VERSION = "0.1.0"
+VERSION = "0.1.1"
 
 class Lsef < Formula
   desc "Rust-based file listing tool inspired by ls"
