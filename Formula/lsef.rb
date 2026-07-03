@@ -1,4 +1,4 @@
-VERSION = "0.1.0"
+VERSION = "0.1.1"
 
 class Lsef < Formula
   desc "Rust-based file listing tool inspired by ls"
@@ -6,8 +6,15 @@ class Lsef < Formula
   version VERSION
   license "MIT"
 
-  url "https://github.com/Takayuki-Todo/lsef/releases/download/v#{VERSION}/lsef-#{VERSION}_darwin_amd64.tar.gz"
-  sha256 "fc482465d0e31fd34ebb510b43d574e231f33239afcdd6ea72d9c8741fed484c"
+  if OS.mac? && Hardware::CPU.intel?
+    url "https://github.com/Takayuki-Todo/lsef/releases/download/v#{VERSION}/lsef-#{VERSION}_darwin_amd64.tar.gz"
+    sha256 "6e0a4223c5d76bc9f9dadeb9ec75822e909e1e2d6f472adc114fea35cd563761"
+  end
+
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/Takayuki-Todo/lsef/releases/download/v#{VERSION}/lsef-#{VERSION}_darwin_arm64.tar.gz"
+    sha256 "f0eec2c2cc4f17668855e32849f3cbb9136ec1eb53f48d88df3c6d07c4851044"
+  end
 
   def install
     bin.install "lsef"
